@@ -1,0 +1,32 @@
+[
+    {
+      "id": 1,
+      "nombre": "Riesgo Financiero",
+      "impacto": 75,
+      "probabilidad": 60
+    },
+    {
+      "id": 2,
+      "nombre": "Riesgo Operacional",
+      "impacto": 50,
+      "probabilidad": 45
+    },
+    {
+      "id": 3,
+      "nombre": "Riesgo Tecnológico",
+      "impacto": 90,
+      "probabilidad": 30
+    },
+    {
+      "id": 4,
+      "nombre": "Riesgo Legal",
+      "impacto": 40,
+      "probabilidad": 20
+    },
+    {
+      "id": 5,
+      "nombre": "Riesgo Reputacional",
+      "impacto": 65,
+      "probabilidad": 55
+    }
+]  
