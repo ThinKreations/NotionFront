@@ -8,6 +8,7 @@ import MainHeader from "@/components/MainHeader";
 const inter = Inter({ subsets: ["latin"] });
 import TableActuales from "@/components/TableActuales";
 import TableTotal from "@/components/TableTotal";
+import DaFooter from "@/components/DaFooter";
 
 export default function Home() {
 
@@ -21,7 +22,7 @@ export default function Home() {
         <hr style={{width:"90vw", margin:"25px", border: "1px solid rgb(200,200,200)"}}/>
         <TableTotal/>
       </div>
-
+      <DaFooter/>
     </>
   );
 }

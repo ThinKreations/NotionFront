@@ -91,6 +91,13 @@ color: white;
   padding: 10px;
 }
 
+.footer{
+  background-color: rgb(20,20,20);
+  color:white;
+margin-top: 5vw;
+padding: 10px;
+}
+
 /* Responsive */
 
 @media screen and (max-width:600px){

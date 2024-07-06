@@ -1,4 +1,4 @@
-export const agregarRiesgos = async (riesgo) => {
+export const agregarRiesgos = async (riesgos) => {
     const res = await fetch(`http://notion-backend-production.up.railway.app/api/riesgos/calculate`, {
         method: 'POST',
         mode: 'cors',

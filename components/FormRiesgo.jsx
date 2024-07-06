@@ -1,11 +1,10 @@
 import React from "react";
 import styles from "../styles/Home.module.css"
 import { useState } from "react";
-//import { agregarRiesgos } from "@/pages/api/riesgos";
+import { agregarRiesgos } from "@/pages/api/riesgos";
 import { schemaAgregarRiesgo } from "@/schemas/agregarRiesgo";
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup/dist/yup.js'
-
 
 export default function FormRiesgo() {
 
@@ -30,9 +29,22 @@ export default function FormRiesgo() {
         console.log(data)
     };
 
+
     const getData = (riesgos) => {
         
     }
+
+    const registrarRiesgos= async ()=>{
+        console.log(riesgos.length)
+        /*for(let i = 0; i<riesgos.length; i++){
+            const {resJSON, res} = await agregarRiesgos(riesgos[i])
+        }*/
+
+        console.log("Aquí se enviarían los datos al back para su procesamiento.")
+
+
+    }
+    
 
     //console.log(riesgos);
 
@@ -55,7 +67,7 @@ export default function FormRiesgo() {
                 <button type="submit" className={styles.btnAgregar}>Agregar</button>
             </form>
 
-            <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+            <form className={styles.form} onSubmit={registrarRiesgos}>
             <h2 style={{ marginTop: "25px" }}>Riesgos Actuales:</h2>
             <table className={styles.table}>
                 <thead>
@@ -70,16 +82,16 @@ export default function FormRiesgo() {
                 <tbody>
                 {riesgos.map((item) => (
                     <tr key={item.id}>
-                    <td className={styles.td}>ID</td>
-                    <td className={styles.td}>{item.nombre}</td>
-                    <td className={styles.td}>{item.impacto}</td>
-                    <td className={styles.td}>{item.probabilidad}</td>
+                        <td className={styles.td}>{riesgos.id}</td>
+                        <td className={styles.td}>{item.nombre}</td>
+                        <td className={styles.td}>{item.impacto}</td>
+                        <td className={styles.td}>{item.probabilidad}</td>
                     </tr>
                 ))}
                 </tbody>
             </table>
             <center>
-                <button className={styles.btnAgregar}>Calcular</button>
+                <button type="submit" className={styles.btnAgregar}>Calcular</button>
             </center>
             </form>
         </>
